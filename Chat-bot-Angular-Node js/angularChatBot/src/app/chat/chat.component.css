@@ -1,0 +1,35 @@
+/* for chat.component.css */
+.list-messages {
+    display: flex;
+    flex-direction: column;
+    height: 88%;
+    overflow: auto;
+}
+
+.left-message {
+    display: flex;
+    margin-left: 10px;
+}
+
+.right-message {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.input-message {
+    height: 12%;
+}
+
+.input-text-message {
+    height: 100%;
+    width: 90%;
+}
+
+.input-send {
+    color: #007bff;
+    position: relative;
+    top: -14px;
+    height: 100%;
+    padding: 9px;
+}
