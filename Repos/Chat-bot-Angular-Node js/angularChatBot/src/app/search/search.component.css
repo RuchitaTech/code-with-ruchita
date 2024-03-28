@@ -1,0 +1,18 @@
+.search{
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: beige;
+}
+input[type=text]{
+    width:240px;
+    height: 30px;
+    margin-left: 20px;
+    /* border: black 2px; */
+}
+.changebackground {
+    background-color: orange;
+}
+.btn{
+    margin-left: 10px;
+    height: 40px;
+}

@@ -1,0 +1,5 @@
+<div class="search" [ngClass]="{changebackground: searchvalue !=''}">
+    <span>Search: </span>
+    <input type="text" [(ngModel)]="searchvalue" placeholder="Enter Text" (input)="onSearchTextChanged()" [maxlength]="12" appBetterHighlight>
+    <button class="btn btn-success"> Search</button>
+</div>

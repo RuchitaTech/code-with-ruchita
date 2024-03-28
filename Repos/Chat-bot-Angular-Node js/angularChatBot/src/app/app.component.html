@@ -1,0 +1,13 @@
+<div class="center chat-container container">
+  <div [innerHTML]="name"></div>
+  <app-chat [messages]="messages" [colorBackRight]="colorBackRight" [colorFontRight]="colorFontRight"
+  [colorBackLeft]="colorBackLeft" [colorFontLeft]="colorFontLeft" class="center"></app-chat>
+  <!-- <app-search></app-search> -->
+  <!-- <app-date-of-birth></app-date-of-birth>
+  <app-notification></app-notification> -->
+  <app-products></app-products>
+  <!-- <app-product-details></app-product-details> -->
+  <!-- <app-customer-list #customer></app-customer-list> -->
+  <!-- <p>You have been selected {{customer.selectedCustomer?.name}}</p> -->
+  <router-outlet></router-outlet>
+</div>

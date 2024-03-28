@@ -1,0 +1,9 @@
+<h1 ngClass="background-color='green'">Todo App</h1>
+<input id="newNotes">
+<button (click)="addNotes()">Add Notes</button>
+<h3 *ngFor="let note of notes">
+  <b>* {{note.description}}</b>
+  <button (click)="deleteNotes(note.id)" *ngIf="note.id">Delete Notes</button>
+</h3>
+
+<app-file-upload></app-file-upload>

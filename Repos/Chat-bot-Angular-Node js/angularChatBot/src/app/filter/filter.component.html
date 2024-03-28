@@ -1,0 +1,10 @@
+<div class="filter-container">
+    <span>Filter:</span>
+    <input type="radio" name="filter" value="All" [(ngModel)]="selectedRadioButton" (change)="onRadioButtonSelectionChanged()" />
+    <span> {{'All Products('+ all+ ')' }}</span>
+    <input type="radio" name="filter" value="Apple" [(ngModel)]="selectedRadioButton" (change)="onRadioButtonSelectionChanged()"/>
+    <span> {{'Apple Product('+ apple + ')'}}</span>
+
+    <input type="radio" name="filter" value="Samsung" [(ngModel)]="selectedRadioButton" (change)="onRadioButtonSelectionChanged()"/>
+    <span> {{'Samsung Product('+ samsung + ')'}}</span>
+</div>

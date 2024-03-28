@@ -1,0 +1,15 @@
+<ng-container *ngFor="let customer of customers; let i =index">
+    <div>
+    <div class="product-container" [ngStyle]="{backgroundColor: 0 === i % 2 ? '#A9A9A9' : '#878787'}">
+        <div>
+            <div class="name-container"><h6>{{customer.customerNo}}</h6></div>
+            <div class="detail-container">
+                <div class="details">{{customer.name}}</div>
+                <div class="details">{{customer.address}}</div>
+                <div class="details">{{customer.city}}</div>
+                <div class="details">{{customer.country}}</div>
+                <button class="btn btn-success" (click)="selectedCustomer = customer">Show Details</button>
+            </div>
+        </div>
+    </div>
+    </div></ng-container>
