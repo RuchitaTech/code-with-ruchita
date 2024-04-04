@@ -89,3 +89,24 @@ input.login::-webkit-inner-spin-button {
   margin-bottom: 15px;  
 }
 
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.is-phone {
+  display: block;
+  margin-left: 0px;
+}
+
+
+// @media only screen and (max-width: 992px) {
+//   .login mat-form-field+mat-form-field {
+//     margin-left: 0px;
+//   }
+
+//   .username {
+//     display: block;
+//   }
+// }
+
