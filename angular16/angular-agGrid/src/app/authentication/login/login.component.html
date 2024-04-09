@@ -45,12 +45,13 @@
   <mat-form-field [ngClass]="{'is-phone':isPhone }">
     <mat-label>Password</mat-label>
     <input matInput [type]="hide ? 'password' : 'text'" placeholder="Enter your password" formControlName="password">
-    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+    <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
       <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
     </button>
     <mat-hint class="error" *ngIf="loginForm.get('password').errors?.['required'] && !loginForm.get('password').valid && loginForm.get('password').touched"> <mat-icon class="fa fa-times error"></mat-icon> Password is invalid
     </mat-hint>
     <mat-hint class="error" *ngIf="loginForm.get('password').errors?.['pattern']">Password should contain uppercase, lowerCase, numbers, specials Characters</mat-hint>
+    <mat-hint class="error" *ngIf="loginForm.get('password').errors?.['noSpaceAllowed']">No spaces required</mat-hint>
   </mat-form-field>
-  <button class="btn-submit" mat-raised-button color="primary">Submit</button>
+  <button type="submit" class="btn-submit" mat-raised-button color="primary">Submit</button>
 </form>

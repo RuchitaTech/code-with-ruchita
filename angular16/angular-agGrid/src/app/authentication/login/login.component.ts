@@ -17,7 +17,6 @@ export class LoginComponent implements OnInit {
   errorMessage: string;
   showLogin: boolean = true;
   isPhone: boolean = false;
-  
   hide = true;
 
   constructor( 
@@ -37,16 +36,19 @@ export class LoginComponent implements OnInit {
     })
     this.loginForm = new FormGroup({
       username: new FormControl(null, [Validators.required, Validators.email, this.noSpaceAllowed]),
-      password : new FormControl(null, [Validators.required, Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')])
+      password : new FormControl(null, [Validators.required, Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}'),this.noSpaceAllowed])
     });
     this.errorMessage = "Please enter username";
   }
 
 
-  onSubmit(){
-    this.showLogin = false;
-    this.router.navigate(['secure/home']);
-    // console.log(this.loginForm);
+  onSubmit() {
+    if (this.loginForm.valid) {
+      this.showLogin = false;
+      this.router.navigate(['secure/home']);
+      console.log(this.loginForm);
+    }
+
   }
 
   noSpaceAllowed(control:FormControl){
