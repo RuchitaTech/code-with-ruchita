@@ -9,7 +9,9 @@ import { SidebarNavComponent } from './secure/sidebar-nav/sidebar-nav.component'
 const appRoutes: Routes = [
   { path: '', component: AppComponent},
   { path: 'public/login', component: LoginComponent },
-  { path: 'secure/home', component: SidebarNavComponent}
+  { path: 'secure/home', component: SidebarNavComponent},
+  { path: '**', component: AppComponent}
+
 ];
 
 @NgModule({
